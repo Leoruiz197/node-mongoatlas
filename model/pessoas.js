@@ -4,7 +4,7 @@ const pessoasModel = new mongoose.Schema({ //criando nosso modelo do banco
     nome: { type: String, required: true }, // chave/ valor: tipo do valor e se é obrigatorio
     altura: { type: Number, required: true },
     idade: { type: Number },
-    sexo: { type: Boolean},
+    sexo: { type: Boolean, required: true},
     dataCriacao: { type: Date, default: Date.now } //default, valor padrao caso nao seja passado
 });
 

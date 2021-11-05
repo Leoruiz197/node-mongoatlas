@@ -45,6 +45,10 @@ router.post('/add', async (req,res) => { //add nova pessoa no banco
         res.status(400).json({message: "esta faltando idade"});
         return; // nao esquecer dos returns dentro dos ifs
     }
+    else if(!req.body.sexo){
+        res.status(400).json({message: "esta faltando sexo"});
+        return; // nao esquecer dos returns dentro dos ifs
+    }
 
     await Pessoa.create(req.body).then(() => {
         res.status(200).json({message: "cadastrado com sucesso"});
